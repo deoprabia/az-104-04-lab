@@ -1,0 +1,57 @@
+{
+ "name": "az104-04-vm1",
+ "id": "/subscriptions/ce511dce-87ad-4241-b0a8-9b636d2dfeb1/resourceGroups/az-104-04-rg/providers/Microsoft.Compute/virtualMachines/az104-04-vm1",
+ "type": "Microsoft.Compute/virtualMachines",
+ "location": "eastus",
+ "properties": {
+     "vmId": "cdcea1df-343d-4af8-9c3d-66909e1bd3ba",
+     "hardwareProfile": {
+         "vmSize": "Standard_D2s_v3"
+     },
+     "storageProfile": {
+         "imageReference": {
+             "publisher": "MicrosoftWindowsServer",
+             "offer": "WindowsServer",
+             "sku": "2019-Datacenter",
+             "version": "latest",
+             "exactVersion": "17763.4377.230505"
+         },
+         "osDisk": {
+             "osType": "Windows",
+             "name": "az104-04-vm1_disk1_1e1aa9e1f47c469d8d080295fbae2b51",
+             "createOption": "FromImage",
+             "caching": "ReadWrite",
+             "managedDisk": {
+                 "id": "/subscriptions/ce511dce-87ad-4241-b0a8-9b636d2dfeb1/resourceGroups/AZ-104-04-RG/providers/Microsoft.Compute/disks/az104-04-vm1_disk1_1e1aa9e1f47c469d8d080295fbae2b51"
+             },
+             "deleteOption": "Detach"
+         },
+         "dataDisks": []
+     },
+     "osProfile": {
+         "computerName": "az104-04-vm1",
+         "adminUsername": "az104vm0",
+         "windowsConfiguration": {
+             "provisionVMAgent": true,
+             "enableAutomaticUpdates": true,
+             "patchSettings": {
+                 "patchMode": "AutomaticByOS",
+                 "assessmentMode": "ImageDefault"
+             }
+         },
+         "secrets": [],
+         "allowExtensionOperations": true
+     },
+     "networkProfile": {
+         "networkInterfaces": [
+             {
+                 "id": "/subscriptions/ce511dce-87ad-4241-b0a8-9b636d2dfeb1/resourceGroups/az-104-04-rg/providers/Microsoft.Network/networkInterfaces/az104-04-nic1",
+                 "properties": {
+                     "primary": true
+                 }
+             }
+         ]
+     },
+     "provisioningState": "Succeeded"
+ }
+}

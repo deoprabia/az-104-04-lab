@@ -1,0 +1,59 @@
+{
+    "name": "az104-04-vm0",
+    "id": "/subscriptions/ce511dce-87ad-4241-b0a8-9b636d2dfeb1/resourceGroups/az-104-04-rg/providers/Microsoft.Compute/virtualMachines/az104-04-vm0",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "eastus",
+    "properties": {
+        "vmId": "4fd1d1a4-38a4-471c-887c-bcb48490f8ba",
+        "hardwareProfile": {
+            "vmSize": "Standard_D2s_v3"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "MicrosoftWindowsServer",
+                "offer": "WindowsServer",
+                "sku": "2019-Datacenter",
+                "version": "latest",
+                "exactVersion": "17763.4377.230505"
+            },
+            "osDisk": {
+                "osType": "Windows",
+                "name": "az104-04-vm0_disk1_a300e303004f422397c86bd8f2859205",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/ce511dce-87ad-4241-b0a8-9b636d2dfeb1/resourceGroups/AZ-104-04-RG/providers/Microsoft.Compute/disks/az104-04-vm0_disk1_a300e303004f422397c86bd8f2859205"
+                },
+                "deleteOption": "Detach",
+                "diskSizeGB": 127
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "az104-04-vm0",
+            "adminUsername": "az104vm0",
+            "windowsConfiguration": {
+                "provisionVMAgent": true,
+                "enableAutomaticUpdates": true,
+                "patchSettings": {
+                    "patchMode": "AutomaticByOS",
+                    "assessmentMode": "ImageDefault"
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/ce511dce-87ad-4241-b0a8-9b636d2dfeb1/resourceGroups/az-104-04-rg/providers/Microsoft.Network/networkInterfaces/az104-04-nic0",
+                    "properties": {
+                        "primary": true
+                    }
+                }
+            ]
+        },
+        "provisioningState": "Succeeded"
+    }
+}
